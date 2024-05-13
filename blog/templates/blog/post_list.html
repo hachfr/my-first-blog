@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Django Girls blog</title>
+    <title>Charlotte's blog</title>
   </head>
   <body>
     <header>
       <h1><a href="/">Django Girls Blog</a></h1>
     </header>
 
+    {% for post in posts %}
     <article>
       <time>published: 08.05.2024, 10:00</time>
       <h2><a href="">My first post</a></h2>
       <p>
-        Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis
-        vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce
-        dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-        fermentum massa justo sit amet risus.
+        Januar, Februar, März, Abril die Jahresuhr steht niemlas still. Mai,
+        Juni, Juli, August retten uns allen die Lebenslust. September, Oktober,
+        November, Dezember, und dann und dann, fängt das Ganz schon wieder von
+        vorne an.
       </p>
-    </article>
-
-    <article>
+      {{posts}} {{posts}}
       <time>published: 08.05.2024, 10:00</time>
       <h2><a href="">My second post</a></h2>
       <p>
-        Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis
-        vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce
-        dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.
+        O Tannenbaum, O Tannenbaum, wie grün sind deine Blätter! Du grünst nicht
+        nur zur Sommerzeit, nein auch im Wintter wenn es schneit. O Tannenbaum,
+        O Tannenbaum, wiie grün sind deine Blätter!
       </p>
     </article>
+    {% endfor %}
   </body>
 </html>
