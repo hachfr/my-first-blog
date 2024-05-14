@@ -120,7 +120,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -130,4 +130,3 @@ TIME_ZONE = 'Europe/Berlin'
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'static'
 ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
-
