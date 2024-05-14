@@ -1,7 +1,15 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Charlotte's blog</title>
+    <title>Django Girls blog</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}" />
   </head>
   <body>
     <header>
@@ -10,22 +18,9 @@
 
     {% for post in posts %}
     <article>
-      <time>published: 08.05.2024, 10:00</time>
-      <h2><a href="">My first post</a></h2>
-      <p>
-        Januar, Februar, März, Abril die Jahresuhr steht niemlas still. Mai,
-        Juni, Juli, August retten uns allen die Lebenslust. September, Oktober,
-        November, Dezember, und dann und dann, fängt das Ganz schon wieder von
-        vorne an.
-      </p>
-      {{posts}} {{posts}}
-      <time>published: 08.05.2024, 10:00</time>
-      <h2><a href="">My second post</a></h2>
-      <p>
-        O Tannenbaum, O Tannenbaum, wie grün sind deine Blätter! Du grünst nicht
-        nur zur Sommerzeit, nein auch im Wintter wenn es schneit. O Tannenbaum,
-        O Tannenbaum, wiie grün sind deine Blätter!
-      </p>
+      <time>published: {{ post.published_date }}</time>
+      <h2><a href="">{{ post.title }}</a></h2>
+      <p>{{ post.text|linebreaksbr }}</p>
     </article>
     {% endfor %}
   </body>
